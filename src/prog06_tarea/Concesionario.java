@@ -49,7 +49,7 @@ public class Concesionario {
             if(veh==null) {
                 //descartamos cualquier posicion de array aun no seteada
             } else if(veh.getMatrícula().equals(vehiculoBuscado)){
-                //formateamos la cadena de salida como JSON
+                //formateamos la cadena de salida con los valores separados por comas
                 sVehiculo = this.preparaCadenaDatos(veh.getFieldsVehiculo());
             }
         }
@@ -147,13 +147,13 @@ public class Concesionario {
     /**
      * un algoritmo para entregar una cadena con los datos separados por comas
      * @param String[] el array con los datos del vehiculo.
-     * @return String en formato array con todos los datos de la cadena.
+     * @return String la cadena con todos los datos del vehiculo.
      */
     private String preparaCadenaDatos(String[] datos){
         String sOutput ; //la cadena a formatear de salida con los datos
         sOutput="";
       
-        // Sirve para no colocar coma separadora en en el ultimo campo
+        // controlcoma sirve para no colocar "coma"  en en el ultimo campo
         // de datos
         int controlComa = 0;
         for (String dato : datos){

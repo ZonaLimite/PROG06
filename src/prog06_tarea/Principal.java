@@ -18,8 +18,8 @@ public class Principal {
     Concesionario conces; // variable miembro concesionario
     
     /**
-     * metodo main ambito estatico
-     * solo instancia la clase llamando al constructor
+     * Metodo main ambito estatico
+     * solo instancia la clase llamando al metodo de arranque.
      * @param args no se utilizan
      */
     public static void main(String args[]){
@@ -28,7 +28,7 @@ public class Principal {
     }
     
     /**
-     * Constructor clase Principal para ambito no estatico
+     * Constructor clase Principal.
      */
     public Principal(){
   
@@ -39,8 +39,8 @@ public class Principal {
     * @param args No es utilizado
     */
     private void startup(){
-        boolean seguir=true;
-        int opcion;
+        boolean seguir=true;//variable control bucle.
+        int opcion;//variable recogida opcion de usuario en menu principal.
         conces = new Concesionario(); //Instanciacion del Concesionario
         
         //bucle principal
@@ -90,7 +90,6 @@ public class Principal {
     /**
     * modificarKms : Se solicitará al usuario por teclado una matrícula y un número de kilómetros
     * Si el vehículo con esa matrícula existe, se actualizará su número de kms al valor introducido.
-    * EL metodo pedira los datos de la matricula y los Kms a actualizar.
     * @return String ,devuelve un string con el resultado de la operacion.
     */
     private String modificarKms(){
