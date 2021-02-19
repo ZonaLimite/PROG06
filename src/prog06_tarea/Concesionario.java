@@ -150,11 +150,12 @@ public class Concesionario {
      * @return String la cadena con todos los datos del vehiculo.
      */
     private String preparaCadenaDatos(String[] datos){
-        String sOutput ; //la cadena a formatear de salida con los datos
-        sOutput="";
+        String sOutput="";
+        //la cadena a formatear de salida con los datos
+               
       
         // controlcoma sirve para no colocar "coma"  en en el ultimo campo
-        // de datos
+        // de datos, de la cadena resultante.
         int controlComa = 0;
         for (String dato : datos){
             sOutput += dato;

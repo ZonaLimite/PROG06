@@ -180,9 +180,9 @@ public class Principal {
 
         Scanner sc = new Scanner(System.in);
         int i=0; //indice de array recogida valores
-        for(String param : paramName){
+        for(String param : paramName){//se recorre todo el guion de parametros
             boolean valorValido;
-            do{
+            do{//se repite la solicitud de datos para un parametro, minetras no sea correcto
                 valorValido=true;
                 try {
                     System.out.println("Introduzca valor para parametro ["+param+"]:");
