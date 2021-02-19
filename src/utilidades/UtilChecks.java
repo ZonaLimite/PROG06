@@ -20,14 +20,14 @@ public class UtilChecks {
  
     private static final String LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
     
- /**
- * Metodo calcularLetraNIF :se hace public este metodo para disponer de el desde
- * fuera paquete. Require un int con el entero del DNI y devuelve la letra
- * correspondiente.
- * @author reutilizado Tema 04 PROG
- * @param dni
- * @return char
- */
+     /**
+     * Metodo calcularLetraNIF :se hace public este metodo para disponer de el desde
+     * fuera paquete.Require un int con el entero del DNI y devuelve la letra
+     * correspondiente.
+     * @author reutilizado Tema 04 PROG
+     * @param dni el numero de dni a ckeckear.
+     * @return char
+     */
      public static char calcularLetraNIF(int dni) {
         char letra;
         // Cálculo de la letra NIF
@@ -48,14 +48,15 @@ public class UtilChecks {
     }
 
 /**
- * Metodo validarNIF_ExpReg Se comprueba solo la correcta validez, mediante 
- * expresiones regulares que la cadena del DNI es la adecuada.
- * @param dni la cadena a analizar
- * @return boolean True si es validad, false en caso contrario.
+ * Metodo validarNIF_ExpReg constituye una interfaz standar de ejecucion de validaciones
+ * mediante mascaras de  expresiones regulares, apoyada en las clases Patter y Matcher.
+ * @param exp la cadena que constiuye la expresion de filtrado o validacion.
+ * @param dni la cadena sobre la que se va a realizar la validacion.
+ * @return boolean True si es valida, false en caso contrario.
  */
     public static boolean validar_ExpReg(String exp,String dni){
         boolean correcto=false;
-        //Pattern posible para un DNI seria [0-9]{7-8}[A-Za-z]
+        
         Pattern p=Pattern.compile(exp);
 
         Matcher m=p.matcher(dni);
@@ -67,12 +68,12 @@ public class UtilChecks {
  /**
  * Metodo validarNIF :se hace public este metodo para disponer de el desde
  * fuera paquete.Require un String con el NIF completo y devuelve true si
- * es valido
+ * es valido.
  * @author reutilizado Tema 04 PROG
- * @param nif
+ * @param nif el nif a checkear.
  * @return boolean
  */
-    public static boolean validarNIF(String nif){
+ public static boolean validarNIF(String nif){
         boolean valido = true;   // Suponemos el NIF válido mientras no se encuentre algún fallo
         char letra_calculada;
         char letra_leida;
@@ -123,7 +124,7 @@ public class UtilChecks {
     }
     
 /**
-* Metodo de validacion de campos base 
+* Logica de negocio de validacion de campos base 
 * @param paramName el identificador del parametro de entrada a checkear.
 * @param valueParam el valor que se ha introducido para el parametro a checkear.
 * @exception ParseException Si no se cumple los criterios de validacion.

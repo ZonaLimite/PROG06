@@ -29,13 +29,10 @@ private int precio; //Precio del vehiculo
 private int numkilómetros; //numero de kilometros del vehiculo
 private LocalDate fechaMat; // fecha de matriculacion del vehiculo
 
- /**************************************
- *  Metodos Getter y Setter.           *
- *  Algunos de ellos adaptan           *
- *  los String proporcionados          *
- *  como parametro a los valores tipo  *
- *  ajustados a cada campo.            *
- ***************************************/
+ 
+ //  Metodos Getter y Setter.           *
+ 
+
     public String getMarca() {
         return marca;
     }
